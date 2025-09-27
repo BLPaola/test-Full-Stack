@@ -1,0 +1,27 @@
+CREATE TABLE usuario (
+    id SERIAL PRIMARY KEY,
+    picture_large TEXT,
+    name_title VARCHAR(50),
+    first_name VARCHAR(100) NOT NULL,
+    last_name VARCHAR(100) NOT NULL,
+    gender VARCHAR(10),
+    phone VARCHAR(20),
+    email VARCHAR(100) UNIQUE NOT NULL,
+    state VARCHAR(100),
+    city VARCHAR(100),
+    postcode INT
+);
+
+select * from usuario;
+
+INSERT INTO usuario (picture_large, name_title, first_name, last_name, gender, phone, email, state, city, postcode) VALUES
+('https://randomuser.me/api/portraits/women/1.jpg', 'Miss', 'Wanda', 'Wright', 'female', '(634) 933-5503', 'wanda.wright@example.com', 'Wyoming', 'Norman', 56276),
+('https://randomuser.me/api/portraits/women/2.jpg', 'Ms', 'Eva', 'Wallace', 'female', '(816) 979-5347', 'eva.wallace@example.com', 'Nebraska', 'Riverside', 25407),
+('https://randomuser.me/api/portraits/women/3.jpg', 'Miss', 'Annie', 'Chambers', 'female', '(595) 837-9900', 'annie.chambers@example.com', 'Ohio', 'Corpus Christi', 22334),
+('https://randomuser.me/api/portraits/women/4.jpg', 'Mrs', 'Valerie', 'Payne', 'female', '(576) 990-2509', 'valerie.payne@example.com', 'North Carolina', 'Wilmington', 25835),
+('https://randomuser.me/api/portraits/men/1.jpg', 'Mr', 'Reginald', 'Graves', 'male', '(534) 947-3636', 'reginald.graves@example.com', 'Louisiana', 'Oakland', 50318),
+('https://randomuser.me/api/portraits/men/2.jpg', 'Mr', 'Marc', 'Ruiz', 'male', '(376) 295-9173', 'marc.ruiz@example.com', 'Maryland', 'Brownsville', 52944),
+('https://randomuser.me/api/portraits/women/5.jpg', 'Miss', 'Serenity', 'Clark', 'female', '(253) 241-3912', 'serenity.clark@example.com', 'Idaho', 'Athens', 55301),
+('https://randomuser.me/api/portraits/men/3.jpg', 'Mr', 'Morris', 'Burke', 'male', '(998) 991-6487', 'morris.burke@example.com', 'Oklahoma', 'Independence', 17023),
+('https://randomuser.me/api/portraits/women/6.jpg', 'Ms', 'Alice', 'Ferguson', 'female', '(873) 750-2292', 'alice.ferguson@example.com', 'Indiana', 'Duncanville', 33359),
+('https://randomuser.me/api/portraits/women/7.jpg', 'Ms', 'Debra', 'Rodriquez', 'female', '(909) 868-3306', 'debra.rodriquez@example.com', 'Nebraska', 'North Valley', 45398);
