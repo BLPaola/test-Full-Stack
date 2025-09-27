@@ -1,6 +1,7 @@
 # Back 
 docker-compose.yml
-'''
+
+
 version: '3.8'
 services:
   postgres:
@@ -18,4 +19,4 @@ services:
 volumes:
   postgres_data:
     driver: local
-'''
+    
